@@ -19,3 +19,28 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 }
+
+
+
+/*
+ *
+ *
+ * age. So open it now, it should look like this:
+ *
+ *   <?php
+ *   class ExampleTest extends TestCase
+ *  {
+ *
+ * A basic functional test example.
+ *
+ * @return void
+ *
+ * public function testBasicExample()
+ * {
+ *   $this->visit('/')
+ *      ->see('Laravel 5.5');
+ * }
+ * }
+ */
+
+
