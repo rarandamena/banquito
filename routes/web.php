@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'UserController@index')->name('home');
+Route::post('/depositar', 'UserController@deposit')->name('deposit');
+Route::post('/retirar', 'UserController@withdraw')->name('withdraw');
+Route::post('/transferir', 'UserController@transfer')->name('transfer');
