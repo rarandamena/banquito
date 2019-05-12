@@ -71,9 +71,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" style="font-size: 25px;">
-                            Bienvenido, {{ $user->name }}
-                            <a href="{{ route('logout') }}" class="btn btn-flat btn-outline-danger float-right"
+                        <div class="card-header" style="font-size: 25px">
+                            <div style="text-align: center" > Bienvenido, {{ $user->name }}</div>
+                            <a href="{{ route('logout') }}" class="btn btn-flat btn-outline-danger align-bottom"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar
                                 Sesión</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -92,7 +92,7 @@
 
                                 <div class="col-8">
                                     <p class="float-right">
-                                        ${{ number_format($user->balance , 2, '.', ',') }} pejos
+                                        ${{ number_format($user->balance , 2, '.', ',') }} Pejitos
                                     </p>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                                     <div class="float-right">
                                         <form action="{{ URL::route('deposit') }}" method="POST">
                                             {{ csrf_field() }}
-                                            <input type="number" min="1" max="1000000" step="1" placeholder="0"
+                                            <input type="number" min="1" max="1000000" step="1" placeholder="Monto"
                                                    class="form-control mb-1" name="monto">
                                             <button type="submit" class="btn btn-success form-control">Abonar</button>
                                         </form>
@@ -123,7 +123,7 @@
                             <div class="row">
                                 <div class="col-5">
                                     <p class="float-left">
-                                        retirar (max. $1,000 por retiro)
+                                        Retirar (max. $1,000 por retiro)
                                     </p>
                                 </div>
 
@@ -131,7 +131,7 @@
                                     <div class="float-right">
                                         <form action="{{ URL::route('withdraw') }}" method="POST">
                                             {{ csrf_field() }}
-                                            <input type="number" max="1000000" step="1" placeholder="0"
+                                            <input type="number" max="1000000" step="1" placeholder="Monto"
                                                    class="form-control mb-1" name="monto">
                                             <button type="submit" class="btn btn-danger form-control">Retirar</button>
                                         </form>
@@ -144,7 +144,7 @@
                             <div class="row">
                                 <div class="col-5">
                                     <p class="float-left">
-                                        Transeferir
+                                        Transeferir (max. $1,000 por retiro)
                                     </p>
                                 </div>
 
@@ -157,7 +157,7 @@
                                                     <option value="{{ $u->id }}">{{ $u->name }}</option>
                                                 @endforeach
                                             </select>
-                                            <input type="number" max="1000000" step="1" placeholder="0"
+                                            <input type="number" max="1000000" step="1" placeholder="Monto"
                                                    class="form-control mb-1" name="monto">
                                             <button type="submit" class="btn btn-primary form-control">Transferir
                                             </button>
