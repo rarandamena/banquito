@@ -41,6 +41,6 @@ class DepositTest extends TestCase
         $user = $user->fresh();
 
         $this->assertEquals(2000, $user->balance);
-    }
 
+    }
 }

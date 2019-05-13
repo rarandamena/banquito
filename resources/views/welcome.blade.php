@@ -14,7 +14,7 @@
 
     <div style="margin: auto; text-align: center">
         <h1>El banquito de Mejico</h1>
-        <h2>En pejos $$$$$$$$</h2>
+        <h2>$ En pejos $</h2>
         <img src="http://s2.subirimagenes.com/otros/previo/thump_437958772201232244894447147.jpg" alt="">
         <br>
         <br>
