@@ -1,8 +1,8 @@
-# banquito
-Es para el proyecto de calidad de software
+# banquito en pejitos
+Es para calidad de software
 
 Este proyecto tiene como objetivo pasar la materia de QA sin morir en el intento... 
-trata de un pequeño banco usando Laravel y phpStorm donde las reglas de negocio son las siguientes:
+trata de un pequeño banco usando Laravel como framework y phpStorm como IDE donde las reglas de negocio son las siguientes:
 
 1.- se puede crear una cuenta usando un correo electrónico.
 2.- un usuario no puede ser creado si ya existe el correo dado de alta en la plataforma.
@@ -17,3 +17,23 @@ trata de un pequeño banco usando Laravel y phpStorm donde las reglas de negocio
 
 
 los requerimientos funcionales son:
+
+1.- registrarse.
+2.- iniciar sesion.
+3.- cerrar sesion.
+4.- abonar a cuenta.
+5.- retirar de la cuenta.
+6.- transferir a otras cuentas dadas de alta.
+
+los proyectos escolares deben ser divertidos, asi que como metodo de aprendizaje opte
+por poner cosas que me dieron risa durante la implementacion..
+
+la imagen que aparece en la pantalla de bienvenida originalmente iba a ser 
+un cajero... pero aparecio el billete de ocho cuartos y pues 
+ahi esta.
+
+
+disculpen la falta de acentos, algo le paso a esta cosa que ya no los quiere poner y me dio flojera 
+componerlo. 
+
+
