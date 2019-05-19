@@ -24,9 +24,9 @@ before_script:
   - php artisan serve >/dev/null 2>&1 &
 
 script:
-  - sudo add-apt-repository ppa:webapps/preview
   - sudo apt-get update
-  - sudo apt-get install unity-webapps-preview -y
+  - sudo apt install snapd
+  - sudo snap install chromium
   - chromium-browser --product-version
   - composer require --dev laravel/dusk
   - php artisan dusk:install
