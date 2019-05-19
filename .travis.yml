@@ -24,6 +24,7 @@ before_script:
   - php artisan serve >/dev/null 2>&1 &
 
 script:
+  - sudo ~/.config/chromium/
   - sudo apt-get update
   - sudo apt install snapd
   - sudo snap install chromium
