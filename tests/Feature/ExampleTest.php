@@ -8,22 +8,13 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ExampleTest extends TestCase
 {
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
+
     public function testSeePejos()
     {
         $response =  $this->get('/');
         $response->assertSee('pejos');
     }
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function testWrongLogin()
     {
         $response = $this->json('POST', '/login', [
