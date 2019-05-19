@@ -29,6 +29,6 @@ script:
   - chromium-browser --product-version
   - composer require --dev laravel/dusk
   - php artisan dusk:install
-  - php artisan dusk:chrome-driver 73
+  - php artisan dusk:chrome-driver 65
   - vendor/bin/phpunit
   - php artisan dusk
