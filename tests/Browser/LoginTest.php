@@ -11,7 +11,7 @@ class LoginTest extends DuskTestCase
 
     public static function prepare()
     {
-        static::startChromeDriver();
+        static::startChromeDriver(|);
     }
 
     /**
