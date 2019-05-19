@@ -10,7 +10,7 @@ sudo: required
 distro: trusty
 
 addons:
-  chrome: 72
+  chrome: stable
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
@@ -29,6 +29,6 @@ before_script:
 script:
   - composer require --dev laravel/dusk
   - php artisan dusk:install
-  - php artisan dusk:chrome-driver 72
+  - php artisan dusk:chrome-driver 74
   - vendor/bin/phpunit
   - php artisan dusk
