@@ -9,21 +9,19 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 class LoginTest extends DuskTestCase
 {
 
-    public static function prepare()
-    {
-        static::startChromeDriver(|);
-    }
+    /*
+        public static function prepare()
+        {
+            static::startChromeDriver();
+        }
 
-    /**
-     * A Dusk test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSee('pejos');
-        });
-    }
+        public function testExample()
+        {
+            $this->browse(function (Browser $browser) {
+                $browser->visit('/')
+                        ->assertSee('pejos');
+            });
+        }
+
+        */
 }
