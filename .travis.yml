@@ -9,6 +9,9 @@ cache:
 sudo: required
 distro: trusty
 
+addons:
+chrome: stable
+
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
@@ -22,17 +25,10 @@ before_script:
   - export APP_ENV=testing
   - php artisan migrate:refresh --seed
   - php artisan serve >/dev/null 2>&1 &
-
-script:
-  - sudo ~/.config/chromium/
-  - sudo apt-get update
-  - sudo apt install snapd
-  - sudo snap install chromium
-  - echo "export PATH=$PATH:/snap/bin" >> ~/.bashrc
-  - source ~/.bashrc
   - chromium-browser --product-version
   - composer require --dev laravel/dusk
   - php artisan dusk:install
   - php artisan dusk:chrome-driver 74
+script:
   - vendor/bin/phpunit
   - php artisan dusk
