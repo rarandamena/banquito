@@ -2,6 +2,11 @@ language: php
 php:
   - '7.1'
 
+cache:
+  directories:
+    - $COMPOSER_CACHE_DIR
+    - $HOME/.cache/composer/files
+
 sudo: required
 distro: trusty
 
