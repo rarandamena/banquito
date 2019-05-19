@@ -29,6 +29,6 @@ before_script:
 script:
   - composer require --dev laravel/dusk
   - php artisan dusk:install
-  - php artisan dusk:chrome-driver 73
+  - php artisan dusk:chrome-driver 72
   - vendor/bin/phpunit
   - php artisan dusk
