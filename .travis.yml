@@ -1,0 +1,33 @@
+language: php
+php:
+  - '7.1'
+cache:
+  directories:
+    - $COMPOSER_CACHE_DIR
+    - $HOME/.cache/composer/files
+
+sudo: required
+distro: trusty
+
+addons:
+  chrome: stable
+
+install:
+  - touch /tmp/database.sqlite
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+
+before_script:
+  # Run chromedriver using X virtual framebuffer
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - ./vendor/laravel/dusk/bin/chromedriver-linux &
+
+  # Run application using testing environment
+  - export APP_ENV=testing
+  - php artisan migrate:refresh --seed
+  - php artisan db:seed --class=TestDataSeeder
+  - php artisan serve >/dev/null 2>&1 &
+
+script:
+  - vendor/bin/phpunit
+  - php artisan dusk
