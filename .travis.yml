@@ -10,7 +10,7 @@ sudo: required
 distro: trusty
 
 addons:
-chrome: stable
+  chrome: stable
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
@@ -29,6 +29,6 @@ before_script:
   - php artisan dusk:install
   - php artisan dusk:chrome-driver 74
 script:
-  - chromium-browser --product-version
+  - google-chrome --version
   - vendor/bin/phpunit
   - php artisan dusk
