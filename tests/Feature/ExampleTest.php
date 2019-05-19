@@ -7,40 +7,15 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
+
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testSeePejos()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $response =  $this->get('/');
+        $response->assertSee('pejos');
     }
 }
-
-
-
-/*
- *
- *
- * age. So open it now, it should look like this:
- *
- *   <?php
- *   class ExampleTest extends TestCase
- *  {
- *
- * A basic functional test example.
- *
- * @return void
- *
- * public function testBasicExample()
- * {
- *   $this->visit('/')
- *      ->see('Laravel 5.5');
- * }
- * }
- */
-
-
