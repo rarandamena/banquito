@@ -9,9 +9,6 @@ cache:
 sudo: required
 distro: trusty
 
-addons:
-  chrome: stable
-
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
@@ -27,6 +24,8 @@ before_script:
   - php artisan serve >/dev/null 2>&1 &
 
 script:
+  - sudo apt-get update
+  - sudo apt-get install chromium-browser
   - composer require --dev laravel/dusk
   - php artisan dusk:install
   - php artisan dusk:chrome-driver 74
