@@ -25,10 +25,10 @@ before_script:
   - export APP_ENV=testing
   - php artisan migrate:refresh --seed
   - php artisan serve >/dev/null 2>&1 &
-  - chromium-browser --product-version
   - composer require --dev laravel/dusk
   - php artisan dusk:install
   - php artisan dusk:chrome-driver 74
 script:
+  - chromium-browser --product-version
   - vendor/bin/phpunit
   - php artisan dusk
