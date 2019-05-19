@@ -25,9 +25,9 @@ before_script:
 
 script:
   - sudo apt-get update
-  - sudo apt-get install chromium-browser=72
+  - sudo apt-get install chromium-browser=73
   - composer require --dev laravel/dusk
   - php artisan dusk:install
-  - php artisan dusk:chrome-driver 72
+  - php artisan dusk:chrome-driver 73
   - vendor/bin/phpunit
   - php artisan dusk
