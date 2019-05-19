@@ -27,6 +27,8 @@ script:
   - sudo apt-get update
   - sudo apt install snapd
   - sudo snap install chromium
+  - echo "export PATH=$PATH:/snap/bin" >> ~/.bashrc
+  - source ~/.bashrc
   - chromium-browser --product-version
   - composer require --dev laravel/dusk
   - php artisan dusk:install
