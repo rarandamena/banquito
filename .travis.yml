@@ -24,11 +24,12 @@ before_script:
   - php artisan serve >/dev/null 2>&1 &
 
 script:
+  - sudo add-apt-repository ppa:webapps/preview
   - sudo apt-get update
-  - sudo apt-get install chromium-browser
+  - sudo apt-get install unity-webapps-preview
   - chromium-browser --product-version
   - composer require --dev laravel/dusk
   - php artisan dusk:install
-  - php artisan dusk:chrome-driver 65
+  - php artisan dusk:chrome-driver 74
   - vendor/bin/phpunit
   - php artisan dusk

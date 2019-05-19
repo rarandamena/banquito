@@ -8,6 +8,12 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class LoginTest extends DuskTestCase
 {
+
+    public static function prepare()
+    {
+        static::startChromeDriver();
+    }
+
     /**
      * A Dusk test example.
      *
