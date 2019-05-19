@@ -27,7 +27,7 @@ before_script:
   - php artisan serve >/dev/null 2>&1 &
   - composer require --dev laravel/dusk
   - php artisan dusk:install
-  - php artisan dusk:chrome-driver 74
+  - php artisan dusk:chrome-driver 75
 script:
   - google-chrome --version
   - vendor/bin/phpunit
