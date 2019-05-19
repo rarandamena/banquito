@@ -13,7 +13,6 @@ addons:
   chrome: stable
 
 install:
-  - touch /temp/database.sqlite
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
 before_script:
